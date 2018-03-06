@@ -2,15 +2,15 @@
 
 This project aims to deploy the item catalog project on a linux server and configure the server to some security concerns.
 
-- IP address ```217.55.11.168```
+- IP address ```62.114.192.136```
 - SSH port ```2200```
-- URL http://217.55.11.168.xip.io/
+- URL http://62.114.192.136.xip.io/
 
 ### SSH Access
 
 - Private key generated locally using ```ssh-keygen``` (provided in the submission notes only).
 - SSH directory on server is ```~/.ssh```.
-- Use ```ssh grader@217.55.11.168 -p 2200 -i {path_to_key_file}```.
+- Use ```ssh grader@62.114.192.136 -p 2200 -i {path_to_key_file}```.
 
 ## Configurations made
 
@@ -74,7 +74,7 @@ This project aims to deploy the item catalog project on a linux server and confi
 - Create file ```sudo nano /etc/apache2/sites-available/FlaskApp.conf``` and add the following to it:
 ```
 <VirtualHost *:80>
-	ServerName 217.55.11.168.xip.io
+	ServerName 62.114.192.136.xip.io
 	ServerAdmin amrgamalmohammed@gmail.com
 	WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
 	<Directory /var/www/FlaskApp/FlaskApp/>
@@ -112,7 +112,7 @@ application.secret_key = 'secret_key'
 
 ### Finally
 
-- Restart apache2 server ```sudo service apache2 restart``` and headd to http://217.55.11.168.xip.io/
+- Restart apache2 server ```sudo service apache2 restart``` and headd to http://62.114.192.136.xip.io/
 
 ### Helpful content
 
